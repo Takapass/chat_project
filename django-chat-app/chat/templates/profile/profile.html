@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    <title>プロフィール</title>
+</head>
+<body>
+    <div class="profile-container">
+        <h1>{{ user.username }}のプロフィール</h1>
+        <p><strong>メール:</strong> {{ user.email }}</p>
+        <p><strong>登録日:</strong> {{ user.date_joined }}</p>
+        <a href="{% url 'edit_profile' %}">プロフィールを編集</a>
+    </div>
+</body>
+</html>
